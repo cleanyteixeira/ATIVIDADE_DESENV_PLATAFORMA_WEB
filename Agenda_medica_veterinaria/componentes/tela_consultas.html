@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Portal Med - Consultas</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/tela_gestão_administrativa.css">
+
+    
+</head>
+<body>
+
+    <!-- Início Navbar -->
+    <nav id="menu-lateral">
+        <span class="btn-accordion" onclick="toggleSidebar()">
+            <img id="arrow-accordion" class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
+        </span>
+        <div class="titulo">
+            <span class="dash"></span>
+            <h2>PORTAL MED</h2>
+        </div>
+        <div class="info-atendente">
+            <img src="./assets/imagem_atendente.png" alt="Imagem do Atendente" class="imagem-atendente">
+            <span><h3>Mariana Bittencourt</h3></span>
+            <span class="cargo-atendente">Atendente</span>
+        </div>
+        <hr>
+        <div class="opcoes">
+            <ul>
+                <li><a href="tela_gestão_administrativa.html">Início</a></li>
+                <li><a href="tela_consultas.html">Consultas</a></li>
+                <li><a href="tela_cadastro_paciente.html">Cadastrar Pacientes</a></li>
+                <li><a href="tela_cadastro_medico.html">Cadastrar Médicos</a></li>
+            </ul>
+            <a href="login.html">Sair</a>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+
+    <main id="app">
+        <section class="main-container">
+            <!-- Inicio -->
+            <header class="cabecalho-pagina">
+                <img src="assets/imagem_consultas.png" alt="Consultas">
+                <h1>Consultas</h1>
+            </header>
+            <section class="section-card">
+                <div class="texto-guia">Listagem de Consultas</div>
+                <table>
+                    <tr class="th">
+                        <td>ID</td>
+                        <td>Médico(a)</td>
+                        <td>Status</td>
+                        <td>Data da Consulta</td>
+                        <td>Hora da Consulta</td>
+                        <td></td>
+                    </tr>
+                    <tr v-for="consulta in consultas" :key="consulta.id">
+                        <td>{{ consulta.id }}</td>
+                        <td>{{ consulta.medico }}</td>
+                        <td>{{ consulta.status }}</td>
+                        <td>{{ consulta.data }}</td>
+                        <td>{{ consulta.hora }}</td>
+                        <td class="opcoes">
+                            <button><img src="assets/img_edit.png" alt="Editar"></button>
+                            <button><img src="assets/img_printer.png" alt="Imprimir"></button>
+                            <button><img src="assets/img_trash.png" alt="Apagar"></button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="section-card">
+                <div class="texto-guia">Escolha a <b>especialidade</b> e siga sua prioridade. Os profissionais serão listados por <b>ordem de disponibilidade</b>.</div>
+                <div class="filtros">
+                    <div class="filtro">
+                        <label for="especialidade">Especialidade</label>
+                        <select name="especialidade" id="especialidade"></select>
+                    </div>
+                    <div class="filtro">
+                        <label for="medico">Medico</label>
+                        <select name="medico" id="medico"></select>
+                    </div>
+                    <div class="filtro">
+                        <label for="datas-disponiveis">Datas Disponíveis</label>
+                        <select name="datasDisponiveis" id="datas-disponiveis"></select>
+                    </div>
+                </div>
+                <div class="botoes-filtro">
+                    <button class="btn btn-secondary">Limpar Filtro</button>
+                    <button class="btn btn-primary">Buscar</button>
+                </div>
+            </section>
+            <section class="section-card">
+                <div class="texto-guia">Horários disponíveis para consulta.</div>
+                <div class="horarios">
+                    <span class="horario" v-for="horario in horarios" :key="horario">{{horario}}</span>
+                </div>
+            </section>
+            <div class="container-marcar-consultas">
+                <button class="btn btn-success">Marcar Consultas</button>
+            </div>
+            <!-- Fim -->
+        </section>
+        <footer>
+            <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
+        </footer>
+    </main>
+
+    <!-- Navbar scripts -->
+    <script src="script-navbar.js"></script>
+
+    <!-- Vue scripts -->
+    <script src="script-vue.js"></script>
+
+</body>
+</html>

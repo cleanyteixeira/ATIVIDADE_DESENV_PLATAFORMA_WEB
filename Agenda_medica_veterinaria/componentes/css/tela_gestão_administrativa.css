@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main, body {
+    padding: 0;
+    margin: 0;
+}
+nav {
+    z-index: 999;
+}
+
+main {
+    z-index: 0;
+    margin: 80px 20px 0;
+    width: 100%;
+    padding-left: 270px;
+    transition: padding 0.5s ease-in-out;
+}
+
+.main-container {
+    width: auto;
+}
+
+body {
+    display: flex;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cabecalho-pagina {
+    display: flex;
+}
+
+.cabecalho-pagina h1 {
+    font-weight: 500;
+}
+
+.cabecalho-pagina img {
+    height: 45px;
+    margin-right: 10px;
+}
+
+.section-card {
+    background-color: #ededed;
+    border-radius:5px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.section-card .texto-guia {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.section-card .texto-guia b {
+    font-weight: 400;
+    color: #5978E5;
+    font-size: 0.9em;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    font-weight: 600;
+    text-align: center;
+}
+
+table tr {
+    background-color: #fdfdfd;
+    height: 40px;
+}
+
+table .th {
+    background: none;
+}
+
+table button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 30px
+}
+
+table .opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    table tr {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+        margin-bottom: 10px;
+    }
+
+    table td {
+        padding: 5px;
+    }
+}
+
+.filtros {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+.filtro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 20px;
+}
+
+label {
+    font-size: 0.8em;
+    margin-bottom: 3px;
+    font-weight: 700;
+}
+
+.filtro select, .field input {
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    background-color: #fff;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.field-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes-filtro {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.btn {
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.container-marcar-consultas {
+    padding-bottom: 30px;
+}
+
+.btn-success {
+    background-color: #1f6756;
+}
+
+.btn-primary {
+    background-color: #58AF9B;
+}
+
+.btn-secondary {
+    background-color: #A1A9A9;
+}
+
+
+
+.horarios {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 15px;
+}
+
+.horario {
+    cursor: pointer;
+    background-color: #cfd2d2;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/*LATERAL*/
+
+#menu-lateral .container-menu-lateral {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+#menu-lateral .btn-accordion {
+    background-color: #B7FAFE;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 0 0 10px 0;
+    padding: 10px 5px;
+    position: fixed;
+    transform: translateX(100%);
+    top: 0;
+    right: 0;
+    z-index: 999;
+
+}
+
+#menu-lateral .btn-accordion img {
+    width: 20px;
+}
+
+#menu-lateral {
+    width: 270px;
+    height: 100vh;
+    background-color: #58AF9B;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#menu-lateral .titulo {
+    display: flex;
+    margin-bottom: 40px;
+    font-size: 1.3em;
+}
+
+#menu-lateral .titulo h2 {
+    margin: 0;
+    color: #efecec;
+
+}
+
+#menu-lateral .dash {
+    width: 5px;
+    height: 40px;
+    background-color: #FFF;
+    margin-right: 15px;
+}
+
+#menu-lateral .info-atendente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu-lateral h3 {
+    margin-bottom: 5px;
+    color: #222121;
+    
+}
+
+#menu-lateral .imagem-atendente {
+    width: 150px;
+    border-radius: 5PX;
+}
+
+#menu-lateral .cargo-atendente {
+    font-weight: 600;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+#menu-lateral hr {
+    width: 160px;
+    border-color: #B7FAFE;
+}
+
+#menu-lateral .opcoes {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu-lateral ul li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#menu-lateral a {
+    text-decoration: none;
+    font-size: 1dvw;
+    font-weight: 600;
+    color: #403e3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 3px;
+    width: 190px;
+}
+
+#menu-lateral a:hover {
+    background-color: #FFF;
+}
+
+.invert {
+    transform: scaleX(-100%);
+}
+
+.hidden {
+    transform: translateX(-245px);
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+footer img {
+    width: 70px;
+}
+
+
+
+
+
+.card img {
+    width: 40px;
+}
+
+.card * {
+    text-decoration: none;
+}
+
+.col {
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #F0F9FF;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #000;
+}
+
+.card-body {
+    margin: 20px;
+}
+
+.card * {
+    font-weight: 400;
+}
+
+.cards-container {
+    display: grid;
+    width: 100%;
+    gap: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+}
