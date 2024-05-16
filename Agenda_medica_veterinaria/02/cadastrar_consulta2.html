@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_cadastro_consult2.css">
+    <link rel="shortcut icon" href="assets/hospital.png" type="image/x-icon">
+    <title>Portal Med</title>
+    
+</head>
+    
+
+<body>
+
+        <nav id="menu-lateral">
+
+            <span class="btn-accordion" onclick="toggleSidebar()">
+                <img id="arrow-accordion" class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
+            </span>
+
+            <div class="titulo">
+                <span class="dash"></span>
+                <h2>Clinica Viver</h2>
+            </div>
+
+            <div class="info-atendente">
+                <img src="assets/pic3.png" alt="Imagem do Atendente" class="imagem-atendente">
+                <span><h3>Maria Raquel</h3></span>
+                <span class="cargo-atendente">Atendente</span>
+            </div>
+            
+            <hr>
+            <div class="opcoes">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tela_consultas1.html">Consultas</a></li>
+                    <li><a href="cadastro_paciente.html">Cadastrar Pacientes</a></li>
+                    <li><a href="cadastro_medico.html">Cadastrar Médicos</a></li>
+
+                </ul>
+                <a href="login.html">Sair</a>
+            </div>
+        </nav>
+
+    <header>
+        <div class="header-content">
+            <h1><img src="./assets/imagem_cadastrar_consulta.png" alt="Consultas"> Cadastrar nova consulta </h1>
+        </div>
+    </header>
+    
+    <main>
+     
+        <div class="section-wrapper">
+            <div class="filter-section">
+                <h1>Escolha a <span style="color: #1a7b7e;">especialidade</span> e siga sua prioridade. <br> Os profissionais serão listados por <span style="color: #1a7b7e;">ordem de disponibilidade</span></h1>
+                <div class="filter-container">
+                    <div class="filter-element">
+                        <label for="element1">Especialidade</label>
+                        <input type="text" id="element1" name="element1">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element2">Médico</label>
+                        <input type="text" id="element2" name="element2">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element3">Datas Dispoíveis</label>
+                        <input type="text" id="element3" name="element3">
+                    </div>    
+                </div>
+                <div class="button-container">
+                    <button class="clear-button">Limpar filtro</button>
+                    <button class="apply-button">Buscar</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h1>Horários disponíveis para consulta</h1>
+                <div class="filter-container">
+                    <div class="filter-element-time">
+                        <button for="element1">09:30</button>
+                    </div>
+                    <div class="filter-element-time">
+                        <button for="element1">10:00</button>
+                    </div>
+                    <div class="filter-element-time">
+                        <button for="element1">10:30</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">11:00</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">11:30</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">12:00</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">12:30</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">13:00</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">13:30</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">14:00</button>
+                    </div>    
+                    <div class="filter-element-time">
+                        <button for="element1">14:30</button>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h1>Cadastrar informações</h1>
+                <div class="filter-container">
+                    <div class="filter-element">
+                        <label for="element1">Nome do Paciente</label>
+                        <input type="text" id="element1" name="element1">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element2">CPF</label>
+                        <input type="text" id="element2" name="element2">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element3">Tipo de consulta</label>
+                        <input type="text" id="element3" name="element3">
+                    </div> 
+                    <div class="filter-element">
+                        <label for="element3">Convênio</label>
+                        <input type="text" id="element3" name="element3">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element3">Data nascimento</label>
+                        <input type="text" id="element3" name="element3">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element3">Observações</label>
+                        <input type="text" id="element3" name="element3">
+                    </div>     
+                </div>
+                <div class="button-container">
+                    <button class="clear-button">Limpar filtro</button>
+                    <button class="apply-button">Buscar</button>
+                </div>
+                
+            </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button class="cadastrar-button"><a href="./cadastro_sucesso3.html">Cadastrar consulta</a> </button>
+        <img src="assets/aaba.jpg" alt="Logo do Aplicativo" class="logo-footer">
+    </footer>
+</body>
+</html>

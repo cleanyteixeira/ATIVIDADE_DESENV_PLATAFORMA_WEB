@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_consultas1.css">
+    <link rel="shortcut icon" href="assets/hospital.png" type="image/x-icon">
+    <title>Portal Med</title>
+    
+</head>
+    
+
+<body>
+    <style>
+        .section-wrapper{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
+
+
+        <nav id="menu-lateral">
+
+            <span class="btn-accordion" onclick="toggleSidebar()">
+                <img id="arrow-accordion" class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
+            </span>
+
+            <div class="titulo">
+                <span class="dash"></span>
+                <h2>Clinica Viver</h2>
+            </div>
+
+            <div class="info-atendente">
+                <img src="assets/pic3.png" alt="Imagem do Atendente" class="imagem-atendente">
+                <span><h3>Maria Raquel</h3></span>
+                <span class="cargo-atendente">Atendente</span>
+            </div>
+            
+            <hr>
+            <div class="opcoes">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tela_consultas1.html">Consultas</a></li>
+                    <li><a href="cadastro_paciente.html">Cadastrar Pacientes</a></li>
+                    <li><a href="cadastro_medico.html">Cadastrar Médicos</a></li>
+
+                </ul>
+                <a href="login.html">Sair</a>
+            </div>
+        </nav>
+
+    <header>
+        <div class="header-content">
+            <h1><img src="./assets/imagem_consultas.png" alt="Consultas"> Consultas </h1>
+        </div>
+    </header>
+    
+    <main>
+     
+        <div class="section-wrapper">
+            <div class="filter-section">
+                <h1>Filtro de Pesquisa</h1>
+                <div class="filter-container">
+                    <div class="filter-element">
+                        <label for="element1">Nome do Paciente:</label>
+                        <input type="text" id="element1" name="element1">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element2">Data da Consulta</label>
+                        <input type="text" name="element2" data-format="dd/mm/aaaa">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element3">Status da Consulta</label>
+                        <input type="text" id="element3" name="element3">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element4">Tipo de Consulta</label>
+                        <input type="text" id="element4" name="element4">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element5">Médico Responsável</label>
+                        <input type="text" id="element5" name="element5">
+                    </div>
+                    <div class="filter-element">
+                        <label for="element6">Id Paciente</label>
+                        <input type="text" id="element6" name="element6">
+                    </div>    
+                </div>
+                <div class="button-container">
+                    <button class="clear-button">Limpar filtro</button>
+                    <button class="apply-button">Aplicar filtro</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h1>Listagem de Consultas</h1>
+                <div class="filter-container">
+                    <div class="filter-element_list">
+                        <ol>
+                            <li>ID</li>
+                            <li>Paciente</li>
+                            <li>Status</li>
+                            <li>Data da Consulta</li>
+                            <li>Médico</li>
+                        </ol>
+                        <ul class="unordered-list">
+                            <li>52</li>
+                            <li>João Silva</li>
+                            <li>Confirmada</li>
+                            <li>2024-04-01</li>
+                            <li>Dr. Carlos Oliveira</li>
+                            <li><img src="./assets/crud.png" alt="crud"></li>
+                        </ul>
+                        <ul class="unordered-list">
+                            <li>35</li>
+                            <li>Pedro Paulo</li>
+                            <li>Confirmada</li>
+                            <li>2024-04-03</li>
+                            <li>Dr. João Oliveira</li>
+                            <li><img src="./assets/crud.png" alt="crud"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button class="cadastrar-button"> <a href="./cadastrar_consulta2.html">Cadastrar Nova Consulta</a></button>
+        
+        <img src="assets/aaba.jpg" alt="Logo do Aplicativo" class="logo-footer">
+    </footer>
+</body>
+</html>
