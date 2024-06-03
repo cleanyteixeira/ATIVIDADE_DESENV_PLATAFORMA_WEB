@@ -11,15 +11,6 @@
     
 
 <body>
-    <style>
-        .section-wrapper{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-    </style>
-
-
         <nav id="menu-lateral">
 
             <span class="btn-accordion" onclick="toggleSidebar()">
@@ -41,13 +32,13 @@
             <div class="opcoes">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="tela_consultas1.html">Consultas</a></li>
-                    <li><a href="cadastro_paciente.html">Cadastrar Pacientes</a></li>
-                    <li><a href="cadastro_medico.html">Cadastrar Médicos</a></li>
-                    <li><a href="landing_page.html">Sair</a></li>
+                <li><a href="tela_consultas1.html">Consultas</a></li>
+                <li><a href="cadastro_paciente.html">Cadastrar Pacientes</a></li>
+                <LI><a href="cadastro_medico.html">Cadastrar Médicos</a></LI>
+                <li><a href="landing_page.html">Sair</a></li>
 
                 </ul>
-                <a href="login.html">Sair</a>
+               
             </div>
         </nav>
 
@@ -72,10 +63,6 @@
                         <input type="text" name="element2" data-format="dd/mm/aaaa">
                     </div>
                     <div class="filter-element">
-                        <label for="element3">Status da Consulta</label>
-                        <input type="text" id="element3" name="element3">
-                    </div>
-                    <div class="filter-element">
                         <label for="element4">Tipo de Consulta</label>
                         <input type="text" id="element4" name="element4">
                     </div>
@@ -83,10 +70,7 @@
                         <label for="element5">Médico Responsável</label>
                         <input type="text" id="element5" name="element5">
                     </div>
-                    <div class="filter-element">
-                        <label for="element6">Id Paciente</label>
-                        <input type="text" id="element6" name="element6">
-                    </div>    
+                  
                 </div>
                 <div class="button-container">
                     <button class="clear-button">Limpar filtro</button>
@@ -94,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="filter-section">
+            <!--<div class="filter-section">
                 <h1>Listagem de Consultas</h1>
                 <div class="filter-container">
                     <div class="filter-element_list">
@@ -106,28 +90,27 @@
                             <li>Médico</li>
                         </ol>
                         <ul class="unordered-list">
-                            <li>52</li>
-                            <li>João Silva</li>
-                            <li>Confirmada</li>
-                            <li>2024-04-01</li>
-                            <li>Dr. Carlos Oliveira</li>
-                            <li><img src="./assets/crud.png" alt="crud"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                         <ul class="unordered-list">
-                            <li>35</li>
-                            <li>Pedro Paulo</li>
-                            <li>Confirmada</li>
-                            <li>2024-04-03</li>
-                            <li>Dr. João Oliveira</li>
-                            <li><img src="./assets/crud.png" alt="crud"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div>-->
+
         </div>
     </main>
     <footer>
-        <button class="cadastrar-button"> <a href="./cadastrar_consulta2.html">Cadastrar Nova Consulta</a></button>
+        <button class="cadastrar-button"> <a href="./cadastrar_consulta2.html">Nova Consulta</a></button>
         
         <img src="assets/logo.png" alt="Logo do Aplicativo" class="logo-footer">
     </footer>

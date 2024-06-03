@@ -161,6 +161,7 @@ footer {
     left: 0;
     width: 100%;
     text-align: right;
+    margin-top: auto;
 }
 
 .logo-footer {
@@ -169,6 +170,11 @@ footer {
     margin-right: 20px; 
     margin-bottom: 10px; 
 }
+
+
+
+
+
 
 /*CONTEUDO*/
 
@@ -199,22 +205,6 @@ main button img {
     margin-right: 10px; 
 }
 
-footer {
-    text-align: right; 
-    position: relative; 
-    bottom: 0; 
-    width: 100%; 
-}
-
-.logo-footer {
-    width: 100px; 
-    height: auto; 
-    margin-left: auto; 
-    margin-right: 20px; 
-    margin-bottom: 10px; 
-}
-
-
 .cadastrar-button {
     background-color: #58AF9B;
     color: white; 
@@ -233,7 +223,6 @@ footer {
 }
 
 
-
 .header-content {
     margin-left: 300px; 
     line-height: normal;
@@ -249,8 +238,6 @@ footer {
     margin-top: 10px; 
     color: #333; 
 }
-
-
 
 .filter-section {
     background-color: #f2f2f2;

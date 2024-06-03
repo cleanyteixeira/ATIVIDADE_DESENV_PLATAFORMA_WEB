@@ -161,6 +161,7 @@ footer {
     left: 0;
     width: 100%;
     text-align: right;
+    margin-top: auto;
 }
 
 .logo-footer {
@@ -182,7 +183,7 @@ main {
 
 
 main section {
-    flex: 1; 
+    flex: 2; 
     margin-right: 20px; 
 }
 
@@ -200,20 +201,6 @@ main button img {
     margin-right: 10px; 
 }
 
-footer {
-    text-align: right; 
-    position: relative; 
-    bottom: 0; 
-    width: 100%; 
-}
-
-.logo-footer {
-    width: 100px; 
-    height: auto; 
-    margin-left: auto; 
-    margin-right: 20px; 
-    margin-bottom: 10px; 
-}
 
 .cadastrar-button {
     background-color: #58AF9B;
@@ -258,6 +245,10 @@ footer {
     border-radius: 10px;
     margin-bottom: 20px; 
     margin-left: 20px;
+}
+
+.filter-section-com{
+    display: flex;
 }
 
 .filter-container {
