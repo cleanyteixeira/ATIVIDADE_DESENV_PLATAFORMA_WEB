@@ -147,12 +147,14 @@
 
 /*FOOTER*/
 
+
 footer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 80%;
     text-align: right;
+    width: 100%; 
 }
 
 .logo-footer {
@@ -161,6 +163,9 @@ footer {
     margin-right: 20px; 
     margin-bottom: 10px; 
 }
+
+
+
 
 
 /*conteudo*/
@@ -191,20 +196,6 @@ main button img {
     margin-right: 10px; 
 }
 
-footer {
-    text-align: right; 
-    position: relative; 
-    bottom: 0; 
-    width: 100%; 
-}
-
-.logo-footer {
-    width: 100px; 
-    height: auto; 
-    margin-left: auto; 
-    margin-right: 20px; 
-    margin-bottom: 10px; 
-}
 
 .cadastrar-button {
     background-color: #58AF9B;
@@ -314,14 +305,18 @@ footer {
 }
 
 
-.filter-section, .filter-section_2 {
+.filter-section {
     display: block; 
     width: 100%; 
     margin-bottom: 20px; 
+    
 }
 
 .section-wrapper {
     margin-top: 20px; 
+    width: 90%;
+
+
 }
 
 .filter-element_list ol {
