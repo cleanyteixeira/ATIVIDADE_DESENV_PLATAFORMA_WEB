@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id_user    String   @id @default(uuid()) @map("_id")
+  name       String
+  email      String
+  password   String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Patient {
+  id_patient      String                @id @default(uuid()) @map("_id")
+  name            String
+  social_code     String
+  birthday_date   String
+  address         Address
+  contact         Contact
+  additional_data PatientAdditionalData
+  created_at      DateTime              @default(now())
+  updated_at      DateTime              @updatedAt
+  Appointment     Appointment[]
+
+  @@map("patients")
+}
+
+model Doctor {
+  id_doctor       String               @id @default(uuid()) @map("_id")
+  name            String
+  social_code     String
+  birthday_date   String
+  address         Address
+  contact         Contact
+  additional_data DoctorAdditionalData
+  created_at      DateTime             @default(now())
+  updated_at      DateTime             @updatedAt
+  Appointment     Appointment[]
+
+  @@map("doctors")
+}
+
+model Appointment {
+  id_appointment String  @id @default(uuid()) @map("_id")
+  date           String
+  status         String
+  type           String
+  doctor_id      String
+  doctor         Doctor  @relation(fields: [doctor_id], references: [id_doctor])
+  patient_id     String
+  patient        Patient @relation(fields: [patient_id], references: [id_patient])
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("appointments")
+}
+
+type Address {
+  street_address String
+  city           String
+  state          String
+}
+
+type Contact {
+  phone   String
+  phone_2 String?
+  email   String
+}
+
+type PatientAdditionalData {
+  name        String
+  observation String
+}
+
+type DoctorAdditionalData {
+  specialty                 String
+  register                  String
+  accepted_health_insurance String
+}
