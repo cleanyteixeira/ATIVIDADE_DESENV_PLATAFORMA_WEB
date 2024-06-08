@@ -1,0 +1,11 @@
+/* CSS específico para o componente Footer */
+
+footer {
+  background-color: #0d6e71;
+  color: #fff;
+  padding: 20px;
+}
+
+footer .container {
+  text-align: center;
+}
